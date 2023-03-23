@@ -50,7 +50,7 @@ const PaymentForm = () => {
         })
     });
     navigate("/card")
-    //console.log(formdata)
+    
   }
    
   return (
