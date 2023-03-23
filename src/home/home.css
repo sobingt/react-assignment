@@ -1,0 +1,7 @@
+#view-cards{
+    position: relative;
+    left:390px;
+    top:50px;
+    padding: 10px 10px;
+    border: 4px solid blue;
+}
