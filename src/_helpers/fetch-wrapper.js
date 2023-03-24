@@ -36,7 +36,12 @@ function authHeader(url) {
 }
 
 function authToken() {
-    return store.getState().auth.user?.token;
+    let userData = localStorage.getItem("user")
+    let tokenData
+    if(userData){
+       tokenData = JSON.parse(userData).tokens.access.token
+    }
+    return tokenData
 }
 
 function handleResponse(response) {
@@ -47,7 +52,8 @@ function handleResponse(response) {
             if ([401, 403].includes(response.status) && authToken()) {
                 // auto logout if 401 Unauthorized or 403 Forbidden response returned from api
                 const logout = () => store.dispatch(authActions.logout());
-                logout();
+                //logout();
+                //aa
             }
 
             const error = (data && data.message) || response.statusText;
