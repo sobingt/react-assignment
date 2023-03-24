@@ -34,7 +34,7 @@ const PaymentForm = () => {
     // formdata.append ("cardExpiration",state.expiry)
     // formdata.append ("cardHolder",state.name)
     // formdata.append ("cardNumber",state.number)
-    // formdata.append('category', " ")
+
      fetch('https://interview-api.onrender.com/v1/cards', { 
         method: 'POST', 
         headers: {
