@@ -17,7 +17,7 @@ export const authActions = { ...slice.actions, ...extraActions };
 export const authReducer = slice.reducer;
 
 // implementation
-
+//aa
 function createInitialState() {
     return {
         // initialize state from local storage to enable user to stay logged in
@@ -39,7 +39,7 @@ function createReducers() {
 }
 
 function createExtraActions() {
-    const baseUrl = `${process.env.REACT_APP_API_URL}/users`;
+    const baseUrl = `${process.env.REACT_APP_API_URL}`;
 
     return {
         login: login()
@@ -48,7 +48,7 @@ function createExtraActions() {
     function login() {
         return createAsyncThunk(
             `${name}/login`,
-            async ({ username, password }) => await fetchWrapper.post(`${baseUrl}/authenticate`, { username, password })
+            async ({ username, password }) => await fetchWrapper.post(`${baseUrl}/auth/login`, {email:username, password })
         );
     }
 }
@@ -69,6 +69,7 @@ function createExtraReducers() {
                 
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('jwt', JSON.stringify(user.tokens.access.token))
                 state.user = user;
 
                 // get return url from location state or default to home page

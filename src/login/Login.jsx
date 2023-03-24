@@ -27,7 +27,7 @@ function Login() {
         password: Yup.string().required('Password is required')
     });
     const formOptions = { resolver: yupResolver(validationSchema) };
-
+  //aa
     // get functions to build form with useForm() hook
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors, isSubmitting } = formState;
@@ -39,8 +39,8 @@ function Login() {
     return (
         <div className="col-md-6 offset-md-3 mt-5">
             <div className="alert alert-info">
-                Username: test<br />
-                Password: test
+                Username: akash10x@gmail.com <br />
+                Password: akash123
             </div>
             <div className="card">
                 <h4 className="card-header">Login</h4>
@@ -69,3 +69,4 @@ function Login() {
         </div>
     )
 }
+
