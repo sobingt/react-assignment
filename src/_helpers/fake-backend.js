@@ -1,7 +1,7 @@
 export { fakeBackend };
 
 function fakeBackend() {
-    let users = [{ id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' }];
+    let users = [{ id: 1, username: 'test', password: 'test', firstName: '', lastName: '' }];
     let realFetch = window.fetch;
     window.fetch = function (url, opts) {
         return new Promise((resolve, reject) => {
@@ -35,7 +35,7 @@ function fakeBackend() {
                     username: user.username,
                     firstName: user.firstName,
                     lastName: user.lastName,
-                    token: 'fake-jwt-token'
+                    token: user.token
                 });
             }
 

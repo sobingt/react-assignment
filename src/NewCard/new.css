@@ -1,0 +1,24 @@
+.input-box{
+    margin-left: 22px;
+    padding: 7px 22px;
+}
+.input-box:hover{
+    transform: scale(1.1);
+}
+#new-card-submit{
+    position: relative;
+    top:70px;
+    left: -520px;
+    padding: 8px 19px;
+    text-decoration: none;
+    color:  rgb(1, 64, 81);
+    font-weight: 800;
+    border: 4px solid rgb(1, 64, 81);
+}
+#new-card-submit:hover{
+    background-color: rgb(139, 235, 130);
+}
+
+
+
+  

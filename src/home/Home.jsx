@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { Link } from 'react-router-dom';
+import "./home.css"
 import { userActions } from '_store';
 
 export { Home };
@@ -28,8 +29,9 @@ function Home() {
                     )}
                 </ul>
             }
+            <button id="view-cards"> <Link to="/card">Click to view cards</Link> </button>
             {users.loading && <div className="spinner-border spinner-border-sm"></div>}
-            {users.error && <div className="text-danger">Error loading users: {users.error.message}</div>}
+            {/* {users.error && <div className="text-danger">Error loading users: {users.error.message}</div>} */}
         </div>
     );
 }
