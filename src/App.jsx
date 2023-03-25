@@ -27,6 +27,8 @@ function App() {
                         }
                     />
                     <Route path="/login" element={<Login />} />
+                    {/* <Route path="/cards" element={""}/>
+                    <Route path="/cards/new" element={""}/> */}
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import {Routes, Route} from "react-router-dom";
 
 import { userActions } from '_store';
 
@@ -19,7 +20,7 @@ function Home() {
     return (
         <div>
             <h1>Hi {authUser?.firstName}!</h1>
-            <p>You're logged in with React 18 + Redux & JWT!!</p>
+            {/* <p>You're logged in with React 18 + Redux & JWT!!</p>
             <h3>Users from secure api end point:</h3>
             {users.length &&
                 <ul>
@@ -29,7 +30,13 @@ function Home() {
                 </ul>
             }
             {users.loading && <div className="spinner-border spinner-border-sm"></div>}
-            {users.error && <div className="text-danger">Error loading users: {users.error.message}</div>}
+            {users.error && <div className="text-danger">Error loading users: {users.error.message}</div>} */}
+            <div>
+                <Routes>
+                    <Route path="/cards" element={""}/>
+                    <Route path="/cards/new" element={""}/>
+                </Routes>
+            </div>
         </div>
     );
 }
